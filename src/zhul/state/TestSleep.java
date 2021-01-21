@@ -2,6 +2,7 @@ package zhul.state;
 
 import zhul.demo01.TestThread4;
 
+//模拟网络延时:放大问题的发生性
 public class TestSleep implements Runnable{
 
     //票数
@@ -14,7 +15,7 @@ public class TestSleep implements Runnable{
                 break;
             }
             try {
-                Thread.sleep(200);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -23,7 +24,7 @@ public class TestSleep implements Runnable{
     }
 
     public static void main(String[] args) {
-        TestThread4 ticket = new TestThread4();
+        TestSleep ticket = new TestSleep();
 
         new Thread(ticket,"小明").start();
         new Thread(ticket,"老师").start();
