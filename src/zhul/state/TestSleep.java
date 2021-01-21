@@ -2,7 +2,6 @@ package zhul.state;
 
 import zhul.demo01.TestThread4;
 
-//模拟网络延时:放大问题的发生性
 public class TestSleep implements Runnable{
 
     //票数
@@ -14,8 +13,9 @@ public class TestSleep implements Runnable{
             if (ticketNums<=0) {
                 break;
             }
+            //模拟延时
             try {
-                Thread.sleep(100);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
