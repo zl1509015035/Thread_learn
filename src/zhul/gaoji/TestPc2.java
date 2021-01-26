@@ -1,4 +1,4 @@
-package zhul.Thread;
+package zhul.gaoji;
 
 //测试生产者消费者问题2：信号灯发，标志位解决
 public class TestPc2 {
